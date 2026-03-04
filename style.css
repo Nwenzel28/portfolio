@@ -60,7 +60,7 @@ header {
 .top-nav a {
   margin-left: 30px;
   text-decoration: none;
-  font-size: 11pt;
+  font-size: 12pt;
   font-weight: 300; /* Light by default */
   color: #000000; /* Same as title */
 }
@@ -71,7 +71,7 @@ header {
 
 .top-nav a:hover {
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 450;
 }
 
 .top-nav a.active:hover {
@@ -97,7 +97,7 @@ h1 {
 
 .banner {
   background-color: #d8eaf2;
-  padding: 17px 1in;
+  padding: 16px 1in;
   font-size: 11pt;
   font-weight: 500;
   display: flex;
