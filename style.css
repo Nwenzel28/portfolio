@@ -115,6 +115,7 @@ h1 {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+  padding: 8px 22px;
 
 }
 
@@ -226,7 +227,7 @@ p {
   margin: 4px 0;
   font-size: 11pt;
   font-weight: 700;
-  padding: 0;
+  padding: 0 0 0 12px;
 }
 
 .footer-left a {
@@ -244,8 +245,8 @@ p {
 .footer-top-btn {
   font-family: 'Lato', sans-serif;
   font-size: 11pt;
-  font-weight: 300;
-  color: #888888;
+  font-weight: 400;
+  color: #666666;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -261,8 +262,8 @@ p {
 /* Thin CSS arrow instead of unicode */
 .footer-arrow {
   display: inline-block;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-left: 1px solid currentColor;
   border-top: 1px solid currentColor;
   transform: rotate(45deg) translateY(2px);
@@ -276,10 +277,10 @@ p {
 }
 
 .footer-info-icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #888888;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -290,7 +291,7 @@ p {
   font-family: Georgia, serif;
   font-style: italic;
   font-size: 11pt;
-  color: #aaaaaa;
+  color: #888888;
   line-height: 1;
   user-select: none;
 }

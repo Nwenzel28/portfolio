@@ -41,7 +41,7 @@ const portfolios = [
   },
 
   {
-    year: "Class of 2028 ♥️",
+    year: "Class of 2028 ♡",
     students: [
       { name: "Nicholas Wenzel", link: "https://sites.google.com/punahou.edu/nwenzelengineering/welcome" },
       { name: "Vincent Lau (Not working, let me know if you find it)", link: "https://sites.google.com/punahou.edu/vincentl-engineering-portfolio/home" },
@@ -104,7 +104,7 @@ const portfolios = [
 const numberFacts = [
 
   { number: -1, fact: "Largest negative integer." },
-  { number: 1, fact: "The only number that appears twice in the Fibonacci sequence." },
+  { number: 1, fact: "The only number to appear twice in the Fibonacci sequence." },
   { number: 2, fact: "Lowest prime number." },
   { number: 3, fact: "Number of dimensions we perceive." },
   { number: 5, fact: "Lowest interstate highway number." },
@@ -121,6 +121,7 @@ const numberFacts = [
   { number: 37, fact: "You have to know (Veritasium)." },
   { number: 42, fact: "Answer to the Ultimate Question of Life, the Universe, and Everything." },
   { number: 49, fact: "49ers." },
+  { number: 50, fact: "Number of driving hours needed to obtain a provisional liscence in Hawai'i, 10 of which must be at night."},
   { number: 52, fact: "Deck of cards." },
   { number: 53, fact: "NFL active roster." },
   { number: 54, fact: "Number of squares on a Rubik's Cube." },
