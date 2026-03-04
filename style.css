@@ -54,7 +54,7 @@ header {
 }
 
 .top-nav a:hover {
-  tfont-weight: 500; /* Bold hovered page */
+  font-weight: 500; /* Bold hovered page */
 }
 
 /* ============================= */
