@@ -170,6 +170,16 @@ h2 {
   font-weight: 400;
 }
 
+h3 {
+  background-color: #f0f0f0;
+  padding: 32px 1.75in;
+  margin: 20px -1.75in 20px -1.75in;
+  font-size: 11pt;
+  font-weight: 700;
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+}
+
 /* ============================= */
 /* Section Layout */
 /* ============================= */
@@ -227,7 +237,7 @@ p {
   margin: 4px 0;
   font-size: 11pt;
   font-weight: 700;
-  padding: 0 0 0 12px;
+  padding: 0;
 }
 
 .footer-left a {
@@ -301,7 +311,7 @@ p {
   position: absolute;
   bottom: calc(100% + 8px);
   right: 0;
-  background-color: #333;
+  background-color: #456;
   color: #fff;
   font-size: 9.5pt;
   font-weight: 300;
@@ -313,4 +323,29 @@ p {
 
 .footer-info-wrap:hover .footer-tooltip {
   display: block;
+}
+/* ============================= */
+/* Expressions (2028 equivalent) */
+/* ============================= */
+
+.expression-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0;
+  margin: 0;
+}
+
+.expression-left {
+  font-size: 11pt;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+}
+
+.expression-right {
+  font-size: 11pt;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  color: #666666;
+  text-align: right;
 }

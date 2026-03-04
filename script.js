@@ -41,7 +41,7 @@ const portfolios = [
   },
 
   {
-    year: "Class of 2028 ♡",
+    year: "Class of 2028 ♥️",
     students: [
       { name: "Nicholas Wenzel", link: "https://sites.google.com/punahou.edu/nwenzelengineering/welcome" },
       { name: "Vincent Lau (Not working, let me know if you find it)", link: "https://sites.google.com/punahou.edu/vincentl-engineering-portfolio/home" },
@@ -104,7 +104,7 @@ const portfolios = [
 const numberFacts = [
 
   { number: -1, fact: "Largest negative integer." },
-  { number: 1, fact: "The only number to appear twice in the Fibonacci sequence." },
+  { number: 1, fact: "The only number that appears twice in the Fibonacci sequence." },
   { number: 2, fact: "Lowest prime number." },
   { number: 3, fact: "Number of dimensions we perceive." },
   { number: 5, fact: "Lowest interstate highway number." },
@@ -121,7 +121,6 @@ const numberFacts = [
   { number: 37, fact: "You have to know (Veritasium)." },
   { number: 42, fact: "Answer to the Ultimate Question of Life, the Universe, and Everything." },
   { number: 49, fact: "49ers." },
-  { number: 50, fact: "Number of driving hours needed to obtain a provisional liscence in Hawai'i, 10 of which must be at night."},
   { number: 52, fact: "Deck of cards." },
   { number: 53, fact: "NFL active roster." },
   { number: 54, fact: "Number of squares on a Rubik's Cube." },
@@ -146,6 +145,28 @@ const numberFacts = [
   { number: "1 000000 000000 066600 000000 000001", fact: "Somehow, someway, a prime number." },
   { number: "170 141183 460469 231731 687303 715884 105727", fact: "Largest prime computed by hand (2^127 - 1)." }
 
+];
+
+
+// =======================
+// 2028 EXPRESSIONS DATA
+// =======================
+
+const expressions2028 = [
+  { expression: "2028",                                    explanation: "The number itself" },
+  { expression: "2000 + 28",                               explanation: "" },
+  { expression: "4 × 507",                                 explanation: "" },
+  { expression: "4 × 3 × 169",                            explanation: "" },
+  { expression: "2² × 3 × 13²",                           explanation: "Prime factorization" },
+  { expression: "√(2028²)",                                explanation: "" },
+  { expression: "2028¹",                                   explanation: "" },
+  { expression: "1014 × 2",                                explanation: "" },
+  { expression: "676 × 3",                                 explanation: "" },
+  { expression: "13² × 12",                                explanation: "" },
+  { expression: "40² + 28",                                explanation: "1600 + 428" },
+  { expression: "45² − 17",                                explanation: "2025 + 3" },
+  { expression: "∑ i for i = 1 to 63 − 3",               explanation: "Sum 1–63 is 2016, +12" },
+  { expression: "2⁰ + 2² + 2³ + 2⁴ + 2⁵ + 2⁶ + 2⁷ + 2⁸ + 2⁹", explanation: "Binary: 11111101100" },
 ];
 
 
@@ -189,6 +210,47 @@ if (portfolioContainer) {
 const numbersContainer = document.getElementById("numbers-container");
 
 if (numbersContainer) {
+
+  // --- Section 1: 2028 Expressions ---
+  const h3a = document.createElement("h3");
+  h3a.textContent = "All of the expressions below are equivalent to 2028";
+  numbersContainer.appendChild(h3a);
+
+  const exprList = document.createElement("dl");
+  exprList.style.margin = "0";
+
+  expressions2028.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "expression-row";
+
+    const left = document.createElement("span");
+    left.className = "expression-left";
+    left.textContent = item.expression;
+
+    div.appendChild(left);
+
+    if (item.explanation) {
+      const right = document.createElement("span");
+      right.className = "expression-right";
+      right.textContent = item.explanation;
+      div.appendChild(right);
+    }
+
+    const p = document.createElement("p");
+    p.style.margin = "0";
+    p.style.padding = "10px 0";
+    p.appendChild(div);
+
+    exprList.appendChild(p);
+  });
+
+  numbersContainer.appendChild(exprList);
+
+  // --- Section 2: Number Facts ---
+  const h3b = document.createElement("h3");
+  h3b.textContent = "A fun fact about every number";
+  numbersContainer.appendChild(h3b);
+
   const dl = document.createElement("dl");
 
   numberFacts.forEach(item => {
