@@ -86,7 +86,7 @@ h1 {
 
 .banner {
   background-color: #d8eaf2;
-  padding: 16px 1in;
+  padding: 14px 1in;
   font-size: 11pt;
   font-weight: 500;
   display: flex;
@@ -112,6 +112,9 @@ h1 {
 .banner-btn:hover {
   background-color: #567;
   color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+
 }
 
 /* ============================= */
@@ -175,6 +178,7 @@ section {
 
 ul {
   list-style: none;
+  padding-left: 0
 }
 
 /* ============================= */

@@ -67,7 +67,9 @@ const portfolios = [
       { name: "Evan Chang", link: "https://sites.google.com/punahou.edu/evanchang/tenth-grade/gear-tutorial" },
       { name: "Max Fermanis", link: "https://sites.google.com/punahou.edu/max-portfolio/home" },
       { name: "Ty Schiffl", link: "https://sites.google.com/punahou.edu/ty-schiffl-global-sustainabili/home" },
-      { name: "Ka'ula Hashimoto", link: "https://sites.google.com/punahou.edu/khashimotofrcportfolio/home" }
+      { name: "Ka'ula Hashimoto", link: "https://sites.google.com/punahou.edu/khashimotofrcportfolio/home" },
+      { name: "Jake Gushikuma", link: "https://sites.google.com/punahou.edu/jakes-engineering-portfolio/home" },
+      { name: "Bodhi Kao", link: "https://sites.google.com/punahou.edu/bodhikaoportfolio/global-sustainability-by-design" }
     ]
   },
 
@@ -125,7 +127,7 @@ const numberFacts = [
   { number: 55, fact: "Sum of the first 10 integers or first 5 square numbers." },
   { number: 60, fact: "Base system used in ancient Babylonia." },
   { number: 64, fact: "Number of tiles on a chessboard." },
-  { number: 67, fact: "Maximum number of letters in a website domain; smallest number palindromic in base 5 and 6." },
+  { number: 67, fact: "Maximum number of letters in a website domain; smallest number palindromic in base 5 and 6. Anything Else? I don't think so." },
   { number: 73, fact: "21st prime number; reverse of 37, the 12th." },
   { number: 80, fact: "Days needed to travel around the world by Phileas Fogg." },
   { number: 81, fact: "The inverse repeats all 10 digits in order." },
@@ -138,10 +140,10 @@ const numberFacts = [
   { number: 999, fact: "Last number before 1,000,000 without an 'a' in it." },
   { number: 1000, fact: "First number with an 'a' in it." },
   { number: 1138, fact: "Title of George Lucas' first film; referenced in Star Wars." },
-  { number: 2340, fact: "Number of school days from K–12." },
+  { number: 2340, fact: "Number of school days from K-12." },
   { number: 26830, fact: "Number of possible Tic-Tac-Toe games." },
   { number: "1 000000 000000 066600 000000 000001", fact: "Somehow, someway, a prime number." },
-  { number: "170 141183 460469 231731 687303 715884 105727", fact: "Largest prime computed by hand (2^127 − 1)." }
+  { number: "170 141183 460469 231731 687303 715884 105727", fact: "Largest prime computed by hand (2^127 - 1)." }
 
 ];
 
