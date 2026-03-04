@@ -4,12 +4,12 @@
 
 body {
   margin: 0;
+  padding-top: 65px;
   font-family: 'Lato', sans-serif;
   background-color: #ffffff;
   color: #000000;
   font-weight: 500;
-  font-size: 12pt;
-
+  font-size: 11pt;
 }
 
 /* ============================= */
@@ -26,15 +26,22 @@ header {
 /* Top Row (Site name + Nav) */
 
 .header-top {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0.5in 0 0.25in; /* 0.5 inch margin */
-  border-bottom: 0.5px solid transparent;
+  padding: 20px 0.5in 20px 0.25in;
+  border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
+}
+
+.header-top.scrolled {
+  border-bottom-color: #e0e0e0;
 }
 
 /* Top Left Text */
@@ -93,14 +100,14 @@ h1 {
 
 .banner-btn {
   border: 1px solid #333;
-  padding: 7px 24px;
+  padding: 8px 24px;
   font-size: 11pt;
   font-weight: 500;
   text-decoration: none;
   color: #333;
   white-space: nowrap;
   margin-left: 0;
-  border-radius: 4px;
+  border-radius: 5px;
   flex-shrink: 0;
 }
 
@@ -154,7 +161,7 @@ main {
 
 h2 {
   background-color: #f0f0f0;
-  padding: 24px 1.75in;
+  padding: 36px 1.75in;
   margin: 10px -1.75in 10px -1.75in;
   font-size: 11pt;
   font-weight: 400;
@@ -178,7 +185,8 @@ ul {
 /* ============================= */
 
 li {
-  margin: 16px 0;
+  /*margin: 16px 0;*/
+  padding: 36px 0;
   font-size: 11pt;
 }
 
@@ -197,5 +205,5 @@ a:hover {
 
 p {
   font-size: 11pt;
-  padding: 24px 0;
+  padding: 36px 0;
 }
