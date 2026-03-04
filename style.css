@@ -83,7 +83,7 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 28px;
-  min-height: 20px;
+  min-height: 17px;
 }
 
 .banner-btn {
@@ -150,7 +150,7 @@ main {
 h2 {
   background-color: #f0f0f0;
   padding: 18px 1.75in;
-  margin: 30px -1.75in 10px -1.75in;
+  margin: 40px -1.75in 15px -1.75in;
   font-size: 11pt;
   font-weight: 400;
 }

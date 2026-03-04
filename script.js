@@ -186,17 +186,23 @@ if (portfolioContainer) {
 const numbersContainer = document.getElementById("numbers-container");
 
 if (numbersContainer) {
+  const dl = document.createElement("dl");
+
   numberFacts.forEach(item => {
-    const section = document.createElement("section");
+    const div = document.createElement("div");
+    div.style.marginBottom = "1em";
 
-    const title = document.createElement("h2");
-    title.textContent = item.number;
+    const line = document.createElement("p");
+    line.style.margin = "0";
 
-    const paragraph = document.createElement("p");
-    paragraph.textContent = item.fact;
+    const bold = document.createElement("strong");
+    bold.textContent = `${item.number}.`;
 
-    section.appendChild(title);
-    section.appendChild(paragraph);
-    numbersContainer.appendChild(section);
+    line.appendChild(bold);
+    line.appendChild(document.createTextNode(` ${item.fact}`));
+    div.appendChild(line);
+    dl.appendChild(div);
   });
+
+  numbersContainer.appendChild(dl);
 }
