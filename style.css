@@ -12,17 +12,6 @@ body {
 }
 
 /* ============================= */
-/* Sticky Header */
-/* ============================= */
-
-/*header {
-  background-color: #ffffff;
-  z-index: 1000;
-  padding-bottom: 0;
-  border-bottom: 0px solid #e0e0e0;
-}*/
-
-/* ============================= */
 /* Sticky Wrapper (banner + nav) */
 /* ============================= */
 
@@ -171,7 +160,7 @@ main {
 h2 {
   background-color: #f0f0f0;
   padding: 36px 1.75in;
-  margin: 10px -1.75in 10px -1.75in;
+  margin: 20px -1.75in 20px -1.75in;
   font-size: 11pt;
   font-weight: 400;
 }
@@ -186,7 +175,6 @@ section {
 
 ul {
   list-style: none;
-  /*padding-left: 0in;*/
 }
 
 /* ============================= */
@@ -213,5 +201,5 @@ a:hover {
 
 p {
   font-size: 12pt;
-  padding: 36px 0;
+  padding: 16px 0;
 }
