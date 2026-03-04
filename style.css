@@ -67,6 +67,7 @@ body {
   color: #000000;
   font-weight: 700;
 }
+
 /* ============================= */
 /* Title */
 /* ============================= */
@@ -206,4 +207,89 @@ a:hover {
 p {
   font-size: 12pt;
   padding: 16px 0;
+}
+
+/* ============================= */
+/* Footer */
+/* ============================= */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px 1.75in;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 60px;
+}
+
+.footer-left p {
+  margin: 4px 0;
+  font-size: 11pt;
+  font-weight: 700;
+  padding: 0;
+}
+
+.footer-left a {
+  color: #226f93;
+  font-weight: 700;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-top-btn {
+  font-family: 'Lato', sans-serif;
+  font-size: 11pt;
+  font-weight: 300;
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: font-weight 0.15s ease;
+}
+
+.footer-top-btn:hover {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer-arrow {
+  font-weight: 300;
+  font-size: 13pt;
+}
+
+.footer-info-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.footer-info-icon {
+  font-size: 15pt;
+  color: #aaaaaa;
+  cursor: default;
+  line-height: 1;
+}
+
+.footer-tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  font-size: 9.5pt;
+  font-weight: 300;
+  padding: 6px 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.footer-info-wrap:hover .footer-tooltip {
+  display: block;
 }
