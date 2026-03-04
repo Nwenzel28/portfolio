@@ -26,10 +26,15 @@ header {
 /* Top Row (Site name + Nav) */
 
 .header-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0.5in 0 0.25in; /* 0.5 inch margin */
+  border-bottom: 0.5px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
 /* Top Left Text */
@@ -83,7 +88,7 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 28px;
-  min-height: 17px;
+  min-height: 15px;
 }
 
 .banner-btn {
@@ -149,8 +154,8 @@ main {
 
 h2 {
   background-color: #f0f0f0;
-  padding: 18px 1.75in;
-  margin: 30px -1.75in 10px -1.75in;
+  padding: 24px 1.75in;
+  margin: 10px -1.75in 10px -1.75in;
   font-size: 11pt;
   font-weight: 400;
 }
@@ -191,6 +196,6 @@ a:hover {
 /* ============================= */
 
 p {
-  font-size: 12pt;
-  margin: 10px 0;
+  font-size: 11pt;
+  padding: 24px 0;
 }

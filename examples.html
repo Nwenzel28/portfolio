@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<header>
+<header class="rock-header">
 
   <div class="header-top">
     <div class="site-name">Portfolio Collection</div>
@@ -35,4 +35,9 @@
 </main>
 
 </body>
+<script>
+  window.addEventListener('scroll', function () {
+    document.querySelector('.header-top').classList.toggle('scrolled', window.scrollY > 0);
+  });
+</script>
 </html>

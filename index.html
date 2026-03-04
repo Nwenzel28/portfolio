@@ -37,5 +37,10 @@
 <main id="portfolio-container"></main>
 
 <script src="script.js"></script>
+<script>
+  window.addEventListener('scroll', function () {
+    document.querySelector('.header-top').classList.toggle('scrolled', window.scrollY > 0);
+  });
+</script>
 </body>
 </html>
