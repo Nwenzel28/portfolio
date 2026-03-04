@@ -153,20 +153,16 @@ const numberFacts = [
 // =======================
 
 const expressions2028 = [
-  { expression: "2028",                                    explanation: "The number itself" },
-  { expression: "2000 + 28",                               explanation: "" },
-  { expression: "4 × 507",                                 explanation: "" },
-  { expression: "4 × 3 × 169",                            explanation: "" },
-  { expression: "2² × 3 × 13²",                           explanation: "Prime factorization" },
-  { expression: "√(2028²)",                                explanation: "" },
-  { expression: "2028¹",                                   explanation: "" },
-  { expression: "1014 × 2",                                explanation: "" },
-  { expression: "676 × 3",                                 explanation: "" },
-  { expression: "13² × 12",                                explanation: "" },
-  { expression: "40² + 28",                                explanation: "1600 + 428" },
-  { expression: "45² − 17",                                explanation: "2025 + 3" },
-  { expression: "∑ i for i = 1 to 63 − 3",               explanation: "Sum 1–63 is 2016, +12" },
-  { expression: "2⁰ + 2² + 2³ + 2⁴ + 2⁵ + 2⁶ + 2⁷ + 2⁸ + 2⁹", explanation: "Binary: 11111101100" },
+  { expression: "√2 ^ 22 - 20",                              explanation: "" },
+  { expression: "ƒ''' (338x³)",                              explanation: "Highest order derivative with only natural coefficients" },
+  { expression: "ƒ''''' (16.9x⁵)",                           explanation: "Highest order derivative with only non-repeating coefficients" },
+  { expression: "7EC",                                       explanation: "Expressed in hexadecimal" },
+  { expression: "78² / 3",                                   explanation: "2028 is almost a perfect square" },
+  { expression: "2·6! + 4·5! + 4·4! + 2·3!",                 explanation: "" },
+  { expression: "2⁸ - 28 + 15 · 5!",                         explanation: "" },
+  { expression: "(10 + 9·8·7 - 6 - 5 + 4)(3 + 2 - 1)",       explanation: "" },
+  { expression: "13² · 2² · 3",                              explanation: "Prime Factors — Travis Dumaran" },
+  { expression: "52 · (8 + 13 + 10 + 2³)",                   explanation: "" },
 ];
 
 
