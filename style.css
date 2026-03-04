@@ -23,15 +23,20 @@ header {
   border-bottom: 0px solid #e0e0e0;
 }
 
+/* ============================= */
+/* Sticky Wrapper (banner + nav) */
+/* ============================= */
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+
 /* Top Row (Site name + Nav) */
 
 .header-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,32 +97,31 @@ h1 {
 /* ============================= */
 
 .banner {
-  background-color: #d8eaf2;
-  padding: 20px 1in;
-  font-size: 11pt;
-  font-weight: 500;
+  background-color: #d9edf7;
+  padding: 10px 1in;
+  font-size: 10pt;
+  font-weight: 300;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 28px;
-  min-height: 15px;
+  gap: 12px;
 }
 
 .banner-btn {
-  border: 1px solid #333;
-  padding: 8px 24px;
-  font-size: 11pt;
-  font-weight: 500;
+  border: 2px solid #333;
+  padding: 7px 16px;
+  font-size: 10pt;
+  font-weight: 400;
   text-decoration: none;
   color: #333;
   white-space: nowrap;
   margin-left: 0;
-  border-radius: 5px;
+  border-radius: 4px;
   flex-shrink: 0;
 }
 
 .banner-btn:hover {
-  background-color: #567;
+  background-color: #456;
   color: #fff;
 }
 
@@ -190,8 +194,7 @@ ul {
 /* ============================= */
 
 li {
-  /*margin: 16px 0;*/
-  padding: 36px 0;
+  margin: 36px 0;
   font-size: 11pt;
 }
 
