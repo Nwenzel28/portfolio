@@ -208,3 +208,11 @@ if (numbersContainer) {
 
   numbersContainer.appendChild(dl);
 }
+
+// =======================
+// FOOTER PORTFOLIO COUNT
+// =======================
+
+const totalPortfolios = portfolios.reduce((sum, group) => sum + group.students.length, 0);
+const footerCount = document.getElementById('footer-count');
+if (footerCount) footerCount.textContent = totalPortfolios;

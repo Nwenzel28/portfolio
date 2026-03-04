@@ -216,9 +216,9 @@ p {
 .site-footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  padding: 40px 1.75in;
-  border-top: 1px solid #e0e0e0;
+  align-items: center;
+  padding: 30px 1.75in;
+  background-color: #f0f0f0;
   margin-top: 60px;
 }
 
@@ -240,28 +240,35 @@ p {
   gap: 20px;
 }
 
+/* Back to top button - use color change instead of font-weight to avoid layout shift */
 .footer-top-btn {
   font-family: 'Lato', sans-serif;
   font-size: 11pt;
   font-weight: 300;
-  color: #000000;
+  color: #888888;
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 6px;
-  transition: font-weight 0.15s ease;
+  gap: 8px;
+  transition: color 0.15s ease;
 }
 
 .footer-top-btn:hover {
-  font-weight: 400;
+  color: #000000;
   text-decoration: none;
 }
 
+/* Thin CSS arrow instead of unicode */
 .footer-arrow {
-  font-weight: 300;
-  font-size: 13pt;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-left: 1px solid currentColor;
+  border-top: 1px solid currentColor;
+  transform: rotate(45deg) translateY(2px);
 }
 
+/* Info icon - clean CSS circle */
 .footer-info-wrap {
   position: relative;
   display: flex;
@@ -269,10 +276,23 @@ p {
 }
 
 .footer-info-icon {
-  font-size: 15pt;
-  color: #aaaaaa;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #aaaaaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: default;
+}
+
+.footer-info-i {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 11pt;
+  color: #aaaaaa;
   line-height: 1;
+  user-select: none;
 }
 
 .footer-tooltip {
