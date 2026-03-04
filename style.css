@@ -4,7 +4,6 @@
 
 body {
   margin: 0;
-  padding-top: 65px;
   font-family: 'Lato', sans-serif;
   background-color: #ffffff;
   color: #000000;
@@ -72,6 +71,7 @@ header {
 
 .top-nav a:hover {
   text-decoration: none;
+  font-weight: 400;
 }
 
 .top-nav a.active:hover {
@@ -97,7 +97,7 @@ h1 {
 
 .banner {
   background-color: #d8eaf2;
-  padding: 20px 1in;
+  padding: 17px 1in;
   font-size: 11pt;
   font-weight: 500;
   display: flex;
@@ -194,7 +194,7 @@ ul {
 /* ============================= */
 
 li {
-  margin: 36px 0;
+  margin: 16px 0;
   font-size: 11pt;
 }
 
