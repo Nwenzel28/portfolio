@@ -15,12 +15,12 @@ body {
 /* Sticky Header */
 /* ============================= */
 
-header {
+/*header {
   background-color: #ffffff;
   z-index: 1000;
   padding-bottom: 0;
   border-bottom: 0px solid #e0e0e0;
-}
+}*/
 
 /* ============================= */
 /* Sticky Wrapper (banner + nav) */
@@ -71,7 +71,7 @@ header {
 
 .top-nav a:hover {
   text-decoration: none;
-  font-weight: 450;
+  font-weight: 400;
 }
 
 .top-nav a.active:hover {
@@ -147,8 +147,8 @@ h1 {
 }
 
 .hero-side {
-  width: 200px;
-  font-size: 13pt;
+  width: 160px;
+  font-size: 14pt;
   flex-shrink: 0;
   align-self: center;
   position: relative;
@@ -186,7 +186,7 @@ section {
 
 ul {
   list-style: none;
-  padding-left: 0in;
+  /*padding-left: 0in;*/
 }
 
 /* ============================= */
@@ -212,6 +212,6 @@ a:hover {
 /* ============================= */
 
 p {
-  font-size: 11pt;
+  font-size: 12pt;
   padding: 36px 0;
 }
