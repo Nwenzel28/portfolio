@@ -128,8 +128,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 1in;
-  min-height: 150px;
+  padding: 30px 1in;
+  min-height: 250px;
 }
 
 .hero h1 {
