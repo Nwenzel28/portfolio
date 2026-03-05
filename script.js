@@ -283,9 +283,9 @@ if (footerCount) footerCount.textContent = totalPortfolios;
 const examplePages = [
   {
     category: "Home Page",
-    name: "Ryder Kawachika",
-    link: "https://sites.google.com/punahou.edu/ryder-kawachika-engineering/home",
-    image: "images/ryder-kawachika.png",
+    name: "Travis Dumaran",
+    link: "https://sites.google.com/punahou.edu/orangesarethebest/home",
+    image: "images/TravisDumaran_Homepage.png",
     description: "A clean, well-organized home page with a clear introduction and easy navigation. The layout makes great use of whitespace and the project thumbnails are inviting without feeling cluttered."
   },
   {
