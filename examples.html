@@ -20,20 +20,10 @@
 </div>
 
 <header class="rock-header">
-
   <h1>Best Pages</h1>
-
 </header>
 
-<main>
-  <section>
-    <ul>
-      <li><a href="#">Example Student 1</a></li>
-      <li><a href="#">Example Student 2</a></li>
-      <li><a href="#">Example Student 3</a></li>
-    </ul>
-  </section>
-</main>
+<div id="examples-container"></div>
 
 <footer class="site-footer">
   <div class="footer-left">
@@ -52,7 +42,7 @@
   </div>
 </footer>
 
-</body>
+<script src="script.js"></script>
 <script>
   window.addEventListener('scroll', function () {
     document.querySelector('.header-top').classList.toggle('scrolled', window.scrollY > 0);
@@ -66,13 +56,9 @@
     : 'Last updated ' + modified.toLocaleDateString([], {month: 'long', day: 'numeric', year: 'numeric'});
   document.getElementById('footer-tooltip').textContent = tooltipText;
 
-  // examples page has no script.js portfolios — set count manually
+  const totalPortfolios = portfolios.reduce((sum, group) => sum + group.students.length, 0);
   const countEl = document.getElementById('footer-count');
-  if (countEl) countEl.textContent = '60';
+  if (countEl) countEl.textContent = totalPortfolios;
 </script>
-<script>
-  window.addEventListener('scroll', function () {
-    document.querySelector('.header-top').classList.toggle('scrolled', window.scrollY > 0);
-  });
-</script>
+</body>
 </html>

@@ -155,14 +155,14 @@ const numberFacts = [
 const expressions2028 = [
   { expression: "√2 ^ 22 - 20",                              explanation: "" },
   { expression: "ƒ''' (338x³)",                              explanation: "Highest order derivative with only natural coefficients" },
-  { expression: "ƒ''''' (16.9x⁵)",                           explanation: "Highest order derivative with only non-repeating coefficients" },
-  { expression: "7EC",                                       explanation: "Expressed in hexadecimal" },
+  { expression: "ƒ''''' (16.9x⁵)",                          explanation: "Highest order derivative with only non-repeating coefficients" },
+  { expression: "7EC",                                        explanation: "Expressed in hexadecimal" },
   { expression: "78² / 3",                                   explanation: "2028 is almost a perfect square" },
-  { expression: "2·6! + 4·5! + 4·4! + 2·3!",                 explanation: "" },
-  { expression: "2⁸ - 28 + 15 · 5!",                         explanation: "" },
-  { expression: "(10 + 9·8·7 - 6 - 5 + 4)(3 + 2 - 1)",       explanation: "" },
+  { expression: "2·6! + 4·5! + 4·4! + 2·3!",               explanation: "" },
+  { expression: "2⁸ - 28 + 15 · 5!",                        explanation: "" },
+  { expression: "(10 + 9·8·7 - 6 - 5 + 4)(3 + 2 - 1)",     explanation: "" },
   { expression: "13² · 2² · 3",                              explanation: "Prime Factors — Travis Dumaran" },
-  { expression: "52 · (8 + 13 + 10 + 2³)",                   explanation: "" },
+  { expression: "52 · (8 + 13 + 10 + 2³)",                  explanation: "" },
 ];
 
 
@@ -275,3 +275,79 @@ if (numbersContainer) {
 const totalPortfolios = portfolios.reduce((sum, group) => sum + group.students.length, 0);
 const footerCount = document.getElementById('footer-count');
 if (footerCount) footerCount.textContent = totalPortfolios;
+
+// =======================
+// EXAMPLE PAGES DATA
+// =======================
+
+const examplePages = [
+  {
+    category: "Home Page",
+    name: "Ryder Kawachika",
+    link: "https://sites.google.com/punahou.edu/ryder-kawachika-engineering/home",
+    image: "images/ryder-kawachika.png",
+    description: "A clean, well-organized home page with a clear introduction and easy navigation. The layout makes great use of whitespace and the project thumbnails are inviting without feeling cluttered."
+  },
+  {
+    category: "Project Page",
+    name: "Noah Shin",
+    link: "https://sites.google.com/punahou.edu/noahshinsengineeringportfolio/home",
+    image: "images/noah-shin.png",
+    description: "Excellent documentation of the engineering design process. Each step is clearly labeled and the embedded photos show real progress from prototype to final product."
+  },
+  {
+    category: "Home Page",
+    name: "Owen Roe",
+    link: "https://oroe0.github.io/portfolio/",
+    image: "images/owen-roe.png",
+    description: "Stands out as the only GitHub Pages portfolio in the collection. The custom-coded layout shows strong technical initiative and a distinctive visual identity compared to Google Sites portfolios."
+  },
+];
+
+
+// =======================
+// AUTO-GENERATE EXAMPLE PAGES
+// =======================
+
+const examplesContainer = document.getElementById("examples-container");
+
+if (examplesContainer) {
+  examplePages.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "example-card";
+
+    const imgWrap = document.createElement("div");
+    imgWrap.className = "example-img-wrap";
+
+    const img = document.createElement("img");
+    img.src = item.image;
+    img.alt = item.name + " portfolio screenshot";
+    img.className = "example-img";
+    imgWrap.appendChild(img);
+
+    const info = document.createElement("div");
+    info.className = "example-info";
+
+    const cat = document.createElement("p");
+    cat.className = "example-category";
+    cat.textContent = item.category;
+
+    const nameLink = document.createElement("a");
+    nameLink.href = item.link;
+    nameLink.textContent = item.name;
+    nameLink.className = "example-name";
+    nameLink.target = "_blank";
+
+    const desc = document.createElement("p");
+    desc.className = "example-desc";
+    desc.textContent = item.description;
+
+    info.appendChild(cat);
+    info.appendChild(nameLink);
+    info.appendChild(desc);
+
+    card.appendChild(imgWrap);
+    card.appendChild(info);
+    examplesContainer.appendChild(card);
+  });
+}
