@@ -289,19 +289,41 @@ const examplePages = [
     description: "A clean, well-organized home page with a clear introduction and easy navigation. The layout makes great use of whitespace and the project thumbnails are inviting without feeling cluttered."
   },
   {
-    category: "Project Page",
-    name: "Noah Shin",
-    link: "https://sites.google.com/punahou.edu/noahshinsengineeringportfolio/home",
-    image: "images/noah-shin.png",
+    category: "Engineering 1",
+    name: "Nicholas Wenzel",
+    link: "https://sites.google.com/punahou.edu/nwenzelengineering/10/eng1",
+    image: "NicholasWenzel_Eng1.png",
     description: "Excellent documentation of the engineering design process. Each step is clearly labeled and the embedded photos show real progress from prototype to final product."
   },
   {
-    category: "Home Page",
-    name: "Owen Roe",
-    link: "https://oroe0.github.io/portfolio/",
-    image: "images/owen-roe.png",
-    description: "Stands out as the only GitHub Pages portfolio in the collection. The custom-coded layout shows strong technical initiative and a distinctive visual identity compared to Google Sites portfolios."
+    category: "Engineering 2",
+    name: "Lauren Phomsopha",
+    link: "https://sites.google.com/punahou.edu/lphomsophaengineeringportfolio/engineering/engineering-2",
+    image: "LaurenPhomsopha_Eng2.png",
+    description: "Highley detailed documentation with photos from several angle and throughout the entire process. The final product is well-presented with a clear explanation of the design choices and results."
   },
+  {  
+    category: "Engineering 3",
+    name: "Nicholas Wenzel",
+    link: "https://sites.google.com/punahou.edu/nwenzelengineering/10/eng3",
+    image: "NicholasWenzel_Eng3.png",
+    description: "Several fully documented project with high quality photos that include removed backgrounds, object highlighting, and consistent lighting. The documentation presented in a clear, step-by-step format that effectively communicates the design process and final results."
+  },
+  {  
+    category: "Engineering 4",
+    name: "Kaleo Fleming",
+    link: "https://sites.google.com/punahou.edu/kfleming26engineeringportfolio/eng-4-projects/electric-go-kart",
+    image: "KaleoFleming_Eng4.png",
+    description: "An extremely well documented process with clear photos and detailed explanations of the design choices. The project itself is impressive, but the documentation really elevates it to a standout portfolio page."
+  },
+  {  
+    category: "Class Independent Project: Transforming Bench",
+    name: "Alex Woo",
+    link: "https://sites.google.com/punahou.edu/awoo26-engineering-portfolio/final-project-transforming-bench",
+    image: "AlexWoo_Bench.png",
+    description: "Stands out as a really simple, functional, and elegant design. The project is well-documented with clear photos and concise explanations of the design choices. The lasting impact of a project completed in just one semester is impressive."
+  },
+  
 ];
 
 
