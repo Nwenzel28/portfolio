@@ -292,35 +292,35 @@ const examplePages = [
     category: "Engineering 1",
     name: "Nicholas Wenzel",
     link: "https://sites.google.com/punahou.edu/nwenzelengineering/10/eng1",
-    image: "NicholasWenzel_Eng1.png",
+    image: "images/NicholasWenzel_Eng1.png",
     description: "Excellent documentation of the engineering design process. Each step is clearly labeled and the embedded photos show real progress from prototype to final product."
   },
   {
     category: "Engineering 2",
     name: "Lauren Phomsopha",
     link: "https://sites.google.com/punahou.edu/lphomsophaengineeringportfolio/engineering/engineering-2",
-    image: "LaurenPhomsopha_Eng2.png",
+    image: "images/LaurenPhomsopha_Eng2.png",
     description: "Highley detailed documentation with photos from several angle and throughout the entire process. The final product is well-presented with a clear explanation of the design choices and results."
   },
   {  
     category: "Engineering 3",
     name: "Nicholas Wenzel",
     link: "https://sites.google.com/punahou.edu/nwenzelengineering/10/eng3",
-    image: "NicholasWenzel_Eng3.png",
+    image: "images/NicholasWenzel_Eng3.png",
     description: "Several fully documented project with high quality photos that include removed backgrounds, object highlighting, and consistent lighting. The documentation presented in a clear, step-by-step format that effectively communicates the design process and final results."
   },
   {  
     category: "Engineering 4",
     name: "Kaleo Fleming",
     link: "https://sites.google.com/punahou.edu/kfleming26engineeringportfolio/eng-4-projects/electric-go-kart",
-    image: "KaleoFleming_Eng4.png",
+    image: "images/KaleoFleming_Eng4.png",
     description: "An extremely well documented process with clear photos and detailed explanations of the design choices. The project itself is impressive, but the documentation really elevates it to a standout portfolio page."
   },
   {  
     category: "Class Independent Project: Transforming Bench",
     name: "Alex Woo",
     link: "https://sites.google.com/punahou.edu/awoo26-engineering-portfolio/final-project-transforming-bench",
-    image: "AlexWoo_Bench.png",
+    image: "images/AlexWoo_Bench.png",
     description: "Stands out as a really simple, functional, and elegant design. The project is well-documented with clear photos and concise explanations of the design choices. The lasting impact of a project completed in just one semester is impressive."
   },
   
