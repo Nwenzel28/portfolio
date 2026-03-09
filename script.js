@@ -10,7 +10,7 @@ const portfolios = [
       { name: "Ryder Kawachika", link: "https://sites.google.com/punahou.edu/ryder-kawachika-engineering/home" },
       { name: "Mason Domion", link: "https://sites.google.com/punahou.edu/mason-domion/home" },
       { name: "Tyler Wee", link: "https://sites.google.com/punahou.edu/tylerwee-portfolio/welcome" },
-      { name: "Kalai Kelekolio", link: "https://sites.google.com/punahou.edu/kalai-kelekolio-portfolio/home" },
+      { name: "Kala'i Kelekolio", link: "https://sites.google.com/punahou.edu/kalai-kelekolio-portfolio/home" },
       { name: "Kaleo Fleming", link: "https://sites.google.com/punahou.edu/kfleming26engineeringportfolio/home" },
       { name: "Alex Woo", link: "https://sites.google.com/punahou.edu/awoo26-engineering-portfolio/home" },
       { name: "Ben Watanabe", link: "https://sites.google.com/punahou.edu/benjaminwatanabesportfolio/home" },
@@ -69,7 +69,8 @@ const portfolios = [
       { name: "Ty Schiffl", link: "https://sites.google.com/punahou.edu/ty-schiffl-global-sustainabili/home" },
       { name: "Ka'ula Hashimoto", link: "https://sites.google.com/punahou.edu/khashimotofrcportfolio/home" },
       { name: "Jake Gushikuma", link: "https://sites.google.com/punahou.edu/jakes-engineering-portfolio/home" },
-      { name: "Bodhi Kao", link: "https://sites.google.com/punahou.edu/bodhikaoportfolio/global-sustainability-by-design" }
+      { name: "Bodhi Kao", link: "https://sites.google.com/punahou.edu/bodhikaoportfolio/global-sustainability-by-design" },
+      { name: "Lytron Shinno-Antoine", link: "https://sites.google.com/punahou.edu/engineeringportfolio" }
     ]
   },
 
