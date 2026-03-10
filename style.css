@@ -20,19 +20,19 @@
 }
 
 [data-theme="dark"] {
-  --bg:           #0f1117;
-  --bg-sticky:    #0f1117;
-  --bg-section:   #1e2330;
-  --bg-banner:    #1a2a38;
-  --text:         #e8eaf0;
-  --text-muted:   #9aa0b0;
-  --text-subtle:  #7a8090;
-  --text-desc:    #b8bcc8;
-  --accent:       #5aafd4;
-  --border:       #2e3448;
-  --banner-btn-border: #9aa0b0;
-  --banner-btn-text:   #c8ccd8;
-  --tooltip-bg:   #2a3550;
+  --bg:           #141414;
+  --bg-sticky:    #141414;
+  --bg-section:   #1f1f1f;
+  --bg-banner:    #1a1a1a;
+  --text:         #e2e2e2;
+  --text-muted:   #888888;
+  --text-subtle:  #666666;
+  --text-desc:    #aaaaaa;
+  --accent:       #4fa8cc;
+  --border:       #2e2e2e;
+  --banner-btn-border: #555555;
+  --banner-btn-text:   #bbbbbb;
+  --tooltip-bg:   #2a2a2a;
 }
 
 /* ============================= */
@@ -481,30 +481,40 @@ p {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px 8px;
-  margin-left: 20px;
+  padding: 4px;
+  margin-left: 24px;
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: var(--text);
-  font-family: 'Lato', sans-serif;
-  font-size: 10pt;
-  font-weight: 300;
-  border-radius: 20px;
-  transition: background-color 0.15s ease, color 0.15s ease;
-  white-space: nowrap;
+  justify-content: center;
+  color: var(--text-muted);
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  flex-shrink: 0;
 }
 
 .theme-toggle:hover {
+  color: var(--text);
   background-color: var(--bg-section);
 }
 
-.theme-toggle-icon {
-  font-size: 14pt;
-  line-height: 1;
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: color 0.2s ease;
 }
 
-.theme-toggle-label {
-  font-size: 10pt;
-  color: var(--text-muted);
+/* Hide all icons by default, show only the active one */
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon,
+.theme-toggle .icon-auto {
+  display: none;
 }
+.theme-toggle[data-mode="light"] .icon-sun  { display: block; }
+.theme-toggle[data-mode="dark"]  .icon-moon { display: block; }
+.theme-toggle[data-mode="auto"]  .icon-auto { display: block; }
