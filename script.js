@@ -157,13 +157,13 @@ const numberFacts = [
 
 const expressions2028 = [
   { expression: "√2 ^ 22 - 20",                              explanation: "" },
-  { expression: "ƒ''' (338x³)",                              explanation: "Highest order derivative with only natural coefficients" },
-  { expression: "ƒ''''' (16.9x⁵)",                          explanation: "Highest order derivative with only non-repeating coefficients" },
+  { expression: "ƒ''' (338x³)",                              explanation: "Highest order equivalent derivative with only natural coefficients" },
+  { expression: "ƒ''''' (16.9x⁵)",                          explanation: "Highest order equivalent derivative with only non-repeating coefficients" },
   { expression: "7EC",                                        explanation: "Expressed in hexadecimal" },
   { expression: "78² / 3",                                   explanation: "2028 is almost a perfect square" },
   { expression: "2·6! + 4·5! + 4·4! + 2·3!",               explanation: "" },
   { expression: "2⁸ - 28 + 15 · 5!",                        explanation: "" },
-  { expression: "(10 + 9·8·7 - 6 - 5 + 4)(3 + 2 - 1)",     explanation: "" },
+  { expression: "(10 + 9·8·7 - 6 - 5 + 4)(3 + 2 - 1)",     explanation: "Happy New Year!" },
   { expression: "13² · 2² · 3",                              explanation: "Prime Factors — Travis Dumaran" },
   { expression: "52 · (8 + 13 + 10 + 2³)",                  explanation: "" },
 ];
