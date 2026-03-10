@@ -36,7 +36,8 @@ const portfolios = [
       { name: "Mathew Matsumoto", link: "https://sites.google.com/punahou.edu/matthew-matsumoto-engineering-/robotics/ftc" },
       { name: "Max Shei", link: "https://sites.google.com/punahou.edu/maxshei/home" },
       { name: "Liam Snyder", link: "https://sites.google.com/punahou.edu/gsd102liamsnyderdigitalportfol/home" },
-      { name: "Carter Nobuhara", link: "https://sites.google.com/punahou.edu/carter-nobuhara-portfolio/home" }
+      { name: "Carter Nobuhara", link: "https://sites.google.com/punahou.edu/carter-nobuhara-portfolio/home" },
+      {name: "Ryaln Cooney", link: "https://site.google.com/punahou.edu/engineering-portfolio/home" }
     ]
   },
 
