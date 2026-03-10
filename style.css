@@ -49,21 +49,6 @@ body {
   font-weight: 500;
   font-size: 11pt;
   transition: var(--transition);
-  opacity: 1;
-}
-
-body.page-fade-out {
-  opacity: 0;
-  transition: opacity 0.18s ease;
-}
-
-body.page-fade-in {
-  animation: fadeIn 0.22s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
 }
 
 /* ============================= */

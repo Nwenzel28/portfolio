@@ -197,11 +197,12 @@ if (portfolioContainer) {
     arrowBtn.addEventListener("click", () => {
       const allSections = Array.from(portfolioContainer.querySelectorAll("section"));
       const next = allSections[idx + 1];
-      if (next) {
-        next.querySelector("h2").scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        document.querySelector(".site-footer").scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      const target = next ? next.querySelector("h2") : document.querySelector(".site-footer");
+      if (!target) return;
+      const stickyHeader = document.querySelector(".sticky-top");
+      const offset = stickyHeader ? stickyHeader.offsetHeight : 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
     });
     title.appendChild(arrowBtn);
 

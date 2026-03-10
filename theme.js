@@ -61,34 +61,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---- Page transitions ----
-  // Mark page as faded-in on arrival
-  document.body.classList.add('page-fade-in');
-
-  // Intercept all same-origin nav link clicks
-  document.addEventListener('click', function (e) {
-    const link = e.target.closest('a[href]');
-    if (!link) return;
-
-    const href = link.getAttribute('href');
-
-    // Skip: external, hash-only, mailto, blank target
-    if (!href || href.startsWith('#') || href.startsWith('mailto:')) return;
-    if (link.target === '_blank') return;
-
-    try {
-      const url = new URL(href, window.location.href);
-      if (url.origin !== window.location.origin) return;
-    } catch (err) {
-      return;
-    }
-
-    e.preventDefault();
-    document.body.classList.add('page-fade-out');
-
-    setTimeout(() => {
-      window.location.href = href;
-    }, 190);
-  });
-
 });
