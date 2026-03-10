@@ -37,7 +37,7 @@ const portfolios = [
       { name: "Max Shei", link: "https://sites.google.com/punahou.edu/maxshei/home" },
       { name: "Liam Snyder", link: "https://sites.google.com/punahou.edu/gsd102liamsnyderdigitalportfol/home" },
       { name: "Carter Nobuhara", link: "https://sites.google.com/punahou.edu/carter-nobuhara-portfolio/home" },
-      {name: "Ryaln Cooney", link: "https://site.google.com/punahou.edu/engineering-portfolio/home" }
+      {name: "Rylan Cooney", link: "https://site.google.com/punahou.edu/engineering-portfolio/home" }
     ]
   },
 
@@ -213,6 +213,7 @@ if (portfolioContainer) {
       const link = document.createElement("a");
       link.href = student.link;
       link.textContent = student.name;
+      link.dataset.name = student.name; // stored for search restore
       li.appendChild(link);
       list.appendChild(li);
     });
@@ -405,7 +406,6 @@ if (examplesContainer) {
 
 (function () {
 
-  // Only runs on pages that have a portfolio container
   if (!document.getElementById("portfolio-container")) return;
 
   // ---- Build the floating bar ----
@@ -432,8 +432,9 @@ if (examplesContainer) {
 
   document.body.appendChild(wrap);
 
-  const input    = wrap.querySelector(".search-input");
-  const countEl  = wrap.querySelector(".search-count");
+  const input   = wrap.querySelector(".search-input");
+  const countEl = wrap.querySelector(".search-count");
+  const inner   = wrap.querySelector(".search-bar-inner");
 
   // ---- Position below the sticky header ----
   function updateTopOffset() {
@@ -452,38 +453,11 @@ if (examplesContainer) {
     return Array.from(document.querySelectorAll("#portfolio-container li"));
   }
 
-  function getTotalCount() {
-    return getAllItems().length;
-  }
-
-  function openSearch() {
-    if (isOpen) return;
-    isOpen = true;
-    updateTopOffset();
-    wrap.classList.add("visible");
-    wrap.removeAttribute("aria-hidden");
-    input.value = "";
-    updateCount(getTotalCount(), getTotalCount());
-    requestAnimationFrame(() => input.focus());
-  }
-
-  function closeSearch() {
-    if (!isOpen) return;
-    isOpen = false;
-    wrap.classList.remove("visible");
-    wrap.setAttribute("aria-hidden", "true");
-    input.value = "";
-    // Restore all items
-    getAllItems().forEach(li => {
-      li.classList.remove("search-hidden");
-      // Remove any highlights
-      const a = li.querySelector("a");
-      if (a) a.innerHTML = escapeHtml(a.textContent);
-    });
-  }
-
   function escapeHtml(str) {
-    return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
   }
 
   function highlightMatch(name, query) {
@@ -497,8 +471,17 @@ if (examplesContainer) {
     );
   }
 
-  function updateCount(matched, total) {
-    if (!input.value.trim()) {
+  // Restore every li to its original visible, un-highlighted state
+  function restoreAll() {
+    getAllItems().forEach(li => {
+      li.classList.remove("search-hidden");
+      const a = li.querySelector("a");
+      if (a) a.innerHTML = escapeHtml(a.dataset.name || a.textContent);
+    });
+  }
+
+  function updateCount(matched, total, hasQuery) {
+    if (!hasQuery) {
       countEl.textContent = `${total}`;
       countEl.classList.remove("no-results");
     } else {
@@ -515,7 +498,8 @@ if (examplesContainer) {
     items.forEach(li => {
       const a = li.querySelector("a");
       if (!a) return;
-      const name = a.textContent;
+      // Always read from the stored original name
+      const name = a.dataset.name || a.textContent;
       const matches = !query || name.toLowerCase().includes(query.toLowerCase());
 
       if (matches) {
@@ -528,12 +512,32 @@ if (examplesContainer) {
       }
     });
 
-    updateCount(matched, total);
+    updateCount(matched, total, !!query);
+  }
+
+  function openSearch() {
+    if (isOpen) return;
+    isOpen = true;
+    updateTopOffset();
+    wrap.classList.add("visible");
+    wrap.removeAttribute("aria-hidden");
+    input.value = "";
+    updateCount(getAllItems().length, getAllItems().length, false);
+    requestAnimationFrame(() => input.focus());
+  }
+
+  function closeSearch() {
+    if (!isOpen) return;
+    isOpen = false;
+    wrap.classList.remove("visible");
+    wrap.setAttribute("aria-hidden", "true");
+    input.value = "";
+    restoreAll();
   }
 
   // ---- Events ----
 
-  // Trigger on '@' when not in any input/textarea
+  // Trigger on '@' when not focused in a text field
   document.addEventListener("keydown", function (e) {
     const tag = document.activeElement.tagName;
     if (tag === "INPUT" || tag === "TEXTAREA") return;
@@ -543,26 +547,28 @@ if (examplesContainer) {
     }
   });
 
-  // Live filter as user types
+  // Live filter; backspace-to-empty closes and restores
   input.addEventListener("input", function () {
-    const q = input.value.trim();
-    filterList(q);
-    // Auto-close if fully cleared
     if (input.value === "") {
       closeSearch();
+    } else {
+      filterList(input.value.trim());
     }
   });
 
-  // Escape to close
+  // Escape closes and restores
   input.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
+      e.stopPropagation();
       closeSearch();
     }
   });
 
-  // Click outside to close
-  wrap.addEventListener("click", function (e) {
-    if (e.target === wrap) closeSearch();
+  // Click outside the inner bar closes and restores
+  document.addEventListener("click", function (e) {
+    if (isOpen && !inner.contains(e.target)) {
+      closeSearch();
+    }
   });
 
 })();
