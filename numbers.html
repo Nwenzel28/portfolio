@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Bree+Serif&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
-  <title>Best Pages</title>
+  <title>2028</title>
   <link rel="stylesheet" href="style.css">
   <script>
     (function() {
@@ -22,8 +22,8 @@
     <div class="site-name">Portfolio Collection</div>
     <div class="top-nav">
       <a href="index.html">Home</a>
-      <a href="examples.html" class="active">Best Pages</a>
-      <a href="numbers.html">2028</a>
+      <a href="examples.html">Best Pages</a>
+      <a href="numbers.html" class="active">2028</a>
       <button class="theme-toggle" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
         <span class="theme-toggle-icon" id="theme-icon">☀️</span>
         <span class="theme-toggle-label" id="theme-label">Light</span>
@@ -33,10 +33,10 @@
 </div>
 
 <header class="rock-header">
-  <h1>Best Pages</h1>
+  <h1>2028</h1>
 </header>
 
-<div id="examples-container"></div>
+<main id="numbers-container"></main>
 
 <footer class="site-footer">
   <div class="footer-left">
@@ -69,10 +69,6 @@
     ? 'Last updated today at ' + modified.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
     : 'Last updated ' + modified.toLocaleDateString([], {month: 'long', day: 'numeric', year: 'numeric'});
   document.getElementById('footer-tooltip').textContent = tooltipText;
-
-  const totalPortfolios = portfolios.reduce((sum, group) => sum + group.students.length, 0);
-  const countEl = document.getElementById('footer-count');
-  if (countEl) countEl.textContent = totalPortfolios;
 </script>
 </body>
 </html>
