@@ -67,7 +67,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0.5in 20px 0.25in;
+  padding: 20px 0.25in 20px 0.25in;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
