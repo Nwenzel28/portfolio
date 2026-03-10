@@ -698,3 +698,118 @@ p {
     font-size: 10.5pt;
   }
 }
+
+/* ============================= */
+/* @ Search Bar                  */
+/* ============================= */
+
+.search-bar-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  /* offset clears the sticky header — set via JS */
+  padding-top: var(--search-top, 80px);
+}
+
+.search-bar-wrap.visible {
+  pointer-events: all;
+}
+
+.search-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--bg-sticky);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  width: min(480px, calc(100vw - 48px));
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+
+  /* Hidden state */
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+[data-theme="dark"] .search-bar-inner {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.40);
+}
+
+.search-bar-wrap.visible .search-bar-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* @ trigger hint */
+.search-at-hint {
+  font-size: 13pt;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* the actual input */
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Lato', sans-serif;
+  font-size: 12pt;
+  font-weight: 300;
+  color: var(--text);
+  caret-color: var(--accent);
+  min-width: 0;
+}
+
+.search-input::placeholder {
+  color: var(--text-subtle);
+}
+
+/* match counter */
+.search-count {
+  font-size: 9.5pt;
+  font-weight: 400;
+  color: var(--text-subtle);
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 48px;
+  text-align: right;
+}
+
+.search-count.no-results {
+  color: #c0666a;
+}
+
+/* Escape hint */
+.search-esc-hint {
+  font-size: 8.5pt;
+  font-weight: 400;
+  color: var(--text-subtle);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+/* Hidden li during search */
+li.search-hidden {
+  display: none;
+}
+
+/* Highlight matching text */
+.search-highlight {
+  background-color: transparent;
+  color: var(--accent);
+  font-weight: 700;
+}

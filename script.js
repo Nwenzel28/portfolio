@@ -398,3 +398,171 @@ if (examplesContainer) {
     examplesContainer.appendChild(card);
   });
 }
+
+// =======================
+// @ SEARCH
+// =======================
+
+(function () {
+
+  // Only runs on pages that have a portfolio container
+  if (!document.getElementById("portfolio-container")) return;
+
+  // ---- Build the floating bar ----
+  const wrap = document.createElement("div");
+  wrap.className = "search-bar-wrap";
+  wrap.setAttribute("aria-hidden", "true");
+
+  wrap.innerHTML = `
+    <div class="search-bar-inner">
+      <span class="search-at-hint">@</span>
+      <input
+        class="search-input"
+        id="search-input"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Search students…"
+        aria-label="Search portfolios"
+      />
+      <span class="search-count" id="search-count"></span>
+      <span class="search-esc-hint">esc</span>
+    </div>
+  `;
+
+  document.body.appendChild(wrap);
+
+  const input    = wrap.querySelector(".search-input");
+  const countEl  = wrap.querySelector(".search-count");
+
+  // ---- Position below the sticky header ----
+  function updateTopOffset() {
+    const sticky = document.querySelector(".sticky-top");
+    const offset = sticky ? sticky.offsetHeight + 12 : 80;
+    wrap.style.setProperty("--search-top", offset + "px");
+  }
+  updateTopOffset();
+  window.addEventListener("resize", updateTopOffset);
+
+  // ---- State ----
+  let isOpen = false;
+
+  // ---- Helpers ----
+  function getAllItems() {
+    return Array.from(document.querySelectorAll("#portfolio-container li"));
+  }
+
+  function getTotalCount() {
+    return getAllItems().length;
+  }
+
+  function openSearch() {
+    if (isOpen) return;
+    isOpen = true;
+    updateTopOffset();
+    wrap.classList.add("visible");
+    wrap.removeAttribute("aria-hidden");
+    input.value = "";
+    updateCount(getTotalCount(), getTotalCount());
+    requestAnimationFrame(() => input.focus());
+  }
+
+  function closeSearch() {
+    if (!isOpen) return;
+    isOpen = false;
+    wrap.classList.remove("visible");
+    wrap.setAttribute("aria-hidden", "true");
+    input.value = "";
+    // Restore all items
+    getAllItems().forEach(li => {
+      li.classList.remove("search-hidden");
+      // Remove any highlights
+      const a = li.querySelector("a");
+      if (a) a.innerHTML = escapeHtml(a.textContent);
+    });
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  function highlightMatch(name, query) {
+    if (!query) return escapeHtml(name);
+    const idx = name.toLowerCase().indexOf(query.toLowerCase());
+    if (idx === -1) return escapeHtml(name);
+    return (
+      escapeHtml(name.slice(0, idx)) +
+      `<span class="search-highlight">${escapeHtml(name.slice(idx, idx + query.length))}</span>` +
+      escapeHtml(name.slice(idx + query.length))
+    );
+  }
+
+  function updateCount(matched, total) {
+    if (!input.value.trim()) {
+      countEl.textContent = `${total}`;
+      countEl.classList.remove("no-results");
+    } else {
+      countEl.textContent = `${matched} / ${total}`;
+      countEl.classList.toggle("no-results", matched === 0);
+    }
+  }
+
+  function filterList(query) {
+    const items = getAllItems();
+    const total = items.length;
+    let matched = 0;
+
+    items.forEach(li => {
+      const a = li.querySelector("a");
+      if (!a) return;
+      const name = a.textContent;
+      const matches = !query || name.toLowerCase().includes(query.toLowerCase());
+
+      if (matches) {
+        li.classList.remove("search-hidden");
+        a.innerHTML = highlightMatch(name, query);
+        matched++;
+      } else {
+        li.classList.add("search-hidden");
+        a.innerHTML = escapeHtml(name);
+      }
+    });
+
+    updateCount(matched, total);
+  }
+
+  // ---- Events ----
+
+  // Trigger on '@' when not in any input/textarea
+  document.addEventListener("keydown", function (e) {
+    const tag = document.activeElement.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA") return;
+    if (e.key === "@") {
+      e.preventDefault();
+      openSearch();
+    }
+  });
+
+  // Live filter as user types
+  input.addEventListener("input", function () {
+    const q = input.value.trim();
+    filterList(q);
+    // Auto-close if fully cleared
+    if (input.value === "") {
+      closeSearch();
+    }
+  });
+
+  // Escape to close
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeSearch();
+    }
+  });
+
+  // Click outside to close
+  wrap.addEventListener("click", function (e) {
+    if (e.target === wrap) closeSearch();
+  });
+
+})();
