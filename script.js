@@ -79,6 +79,7 @@ const portfolios = [
     year: "Class of 2029",
     students: [
       { name: "Hudsen Wong", link: "https://sites.google.com/punahou.edu/hudsenwongengineeringportfolio/home" },
+      { name: "Rhys Morita", link: "https://sites.google.com/punahou.edu/rhysmorita-engineering/home" },
       { name: "Gabe Warwick", link: "https://sites.google.com/punahou.edu/gsd-portfolio-gabe/home" },
       { name: "Clara Elham", link: "https://sites.google.com/punahou.edu/claras-engineering-portfolio/home" },
       { name: "Keanu Kim", link: "https://sites.google.com/punahou.edu/kkim-gsd/home" },
