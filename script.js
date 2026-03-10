@@ -176,21 +176,42 @@ const expressions2028 = [
 const portfolioContainer = document.getElementById("portfolio-container");
 
 if (portfolioContainer) {
-  portfolios.forEach(group => {
+  portfolios.forEach((group, idx) => {
     const section = document.createElement("section");
+    section.id = `section-${idx}`;
 
     const title = document.createElement("h2");
-    title.textContent = `${group.year} (${group.students.length})`;
+
+    const titleText = document.createElement("span");
+    titleText.textContent = `${group.year} (${group.students.length})`;
+    title.appendChild(titleText);
+
+    // Down-arrow: scrolls to next section's h2
+    const arrowBtn = document.createElement("button");
+    arrowBtn.className = "h2-scroll-btn";
+    arrowBtn.setAttribute("aria-label", "Scroll to next section");
+    arrowBtn.title = "Next section";
+    const arrow = document.createElement("span");
+    arrow.className = "h2-down-arrow";
+    arrowBtn.appendChild(arrow);
+    arrowBtn.addEventListener("click", () => {
+      const allSections = Array.from(portfolioContainer.querySelectorAll("section"));
+      const next = allSections[idx + 1];
+      if (next) {
+        next.querySelector("h2").scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        document.querySelector(".site-footer").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+    title.appendChild(arrowBtn);
 
     const list = document.createElement("ul");
 
     group.students.forEach(student => {
       const li = document.createElement("li");
       const link = document.createElement("a");
-
       link.href = student.link;
       link.textContent = student.name;
-
       li.appendChild(link);
       list.appendChild(li);
     });

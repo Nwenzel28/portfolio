@@ -17,6 +17,7 @@
   --banner-btn-text:   #333333;
   --tooltip-bg:   #456;
   --transition:   background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  --li-hover-bg:  #f5f5f5;
 }
 
 [data-theme="dark"] {
@@ -33,10 +34,11 @@
   --banner-btn-border: #4a4a4a;
   --banner-btn-text:   #c0c0c0;
   --tooltip-bg:   #2e2e2e;
+  --li-hover-bg:  #1e1e1e;
 }
 
 /* ============================= */
-/* Base Layout */
+/* Page Transition               */
 /* ============================= */
 
 body {
@@ -47,6 +49,21 @@ body {
   font-weight: 500;
   font-size: 11pt;
   transition: var(--transition);
+  opacity: 1;
+}
+
+body.page-fade-out {
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+body.page-fade-in {
+  animation: fadeIn 0.22s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* ============================= */
@@ -67,7 +84,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0.25in 20px 0.25in;
+  padding: 20px 0.5in 20px 0.25in;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
@@ -79,7 +96,7 @@ body {
 /* Top Left Text */
 
 .site-name {
-  font-weight: 300; /* Lato Light */
+  font-weight: 300;
   font-size: 15pt;
 }
 
@@ -94,12 +111,12 @@ body {
   margin-left: 30px;
   text-decoration: none;
   font-size: 12pt;
-  font-weight: 300; /* Light by default */
-  color: var(--text); /* Same as title */
+  font-weight: 300;
+  color: var(--text);
 }
 
 .top-nav a.active {
-  font-weight: 700; /* Bold current page */
+  font-weight: 700;
 }
 
 .top-nav a:hover {
@@ -112,7 +129,6 @@ body {
   font-weight: 700;
 }
 
-/* Bump font weight slightly in dark mode for optical thinning compensation */
 [data-theme="dark"] .top-nav a {
   font-weight: 400;
 }
@@ -121,7 +137,7 @@ body {
 }
 
 /* ============================= */
-/* Title */
+/* Title                         */
 /* ============================= */
 
 h1 {
@@ -134,7 +150,7 @@ h1 {
 }
 
 /* ============================= */
-/* Banner */
+/* Banner                        */
 /* ============================= */
 
 .banner {
@@ -170,11 +186,10 @@ h1 {
   text-decoration: none;
   font-weight: 700;
   padding: 8px 22px;
-
 }
 
 /* ============================= */
-/* Hero Section */
+/* Hero Section                  */
 /* ============================= */
 
 .hero {
@@ -205,15 +220,16 @@ h1 {
 }
 
 /* ============================= */
-/* Main Content */
+/* Main Content                  */
 /* ============================= */
 
 main {
-  padding: 60px 1.75in; /* 1 inch margin */
+  padding: 60px 1.75in;
 }
 
 /* ============================= */
-/* Section Headers */
+/* Section Headers (h2 with      */
+/* down-arrow scroll button)     */
 /* ============================= */
 
 h2 {
@@ -223,6 +239,9 @@ h2 {
   font-size: 11pt;
   font-weight: 400;
   transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h3 {
@@ -236,8 +255,36 @@ h3 {
   transition: var(--transition);
 }
 
+/* Down-arrow button inside h2 */
+.h2-scroll-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 0.1in;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  transition: color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.h2-scroll-btn:hover {
+  color: var(--text);
+}
+
+/* Down arrow — same stroke style as .footer-arrow */
+.h2-down-arrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+}
+
 /* ============================= */
-/* Section Layout */
+/* Section Layout                */
 /* ============================= */
 
 section {
@@ -246,20 +293,37 @@ section {
 
 ul {
   list-style: none;
-  padding-left: 0
+  padding-left: 0;
 }
 
 /* ============================= */
-/* Lists */
+/* Lists — hover states          */
 /* ============================= */
 
 li {
-  margin: 16px 0;
+  margin: 0;
   font-size: 11pt;
 }
 
+/* Hover row — background + left indent */
+li a {
+  display: block;
+  padding: 9px 10px 9px 6px;
+  border-radius: 5px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: background-color 0.13s ease, padding-left 0.13s ease, color 0.13s ease;
+}
+
+li a:hover {
+  background-color: var(--li-hover-bg);
+  padding-left: 14px;
+  text-decoration: none;
+}
+
+/* Keep general anchor styles for non-list links */
 a {
-  color: var(--accent); /* same as title */
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -268,7 +332,7 @@ a:hover {
 }
 
 /* ============================= */
-/* Paragraphs */
+/* Paragraphs                    */
 /* ============================= */
 
 p {
@@ -277,7 +341,7 @@ p {
 }
 
 /* ============================= */
-/* Footer */
+/* Footer                        */
 /* ============================= */
 
 .site-footer {
@@ -308,7 +372,6 @@ p {
   gap: 20px;
 }
 
-/* Back to top button - use color change instead of font-weight to avoid layout shift */
 .footer-top-btn {
   font-family: 'Lato', sans-serif;
   font-size: 11pt;
@@ -326,7 +389,7 @@ p {
   text-decoration: none;
 }
 
-/* Thin CSS arrow instead of unicode */
+/* Up arrow */
 .footer-arrow {
   display: inline-block;
   width: 8px;
@@ -336,7 +399,7 @@ p {
   transform: rotate(45deg) translateY(2px);
 }
 
-/* Info icon - clean CSS circle */
+/* Info icon */
 .footer-info-wrap {
   position: relative;
   display: flex;
@@ -381,6 +444,7 @@ p {
 .footer-info-wrap:hover .footer-tooltip {
   display: block;
 }
+
 /* ============================= */
 /* Expressions (2028 equivalent) */
 /* ============================= */
@@ -486,6 +550,7 @@ p {
   margin: 0;
   padding: 0;
 }
+
 /* ============================= */
 /* Theme Toggle Button           */
 /* ============================= */
@@ -520,10 +585,8 @@ p {
   stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: color 0.2s ease;
 }
 
-/* Hide all icons by default, show only the active one */
 .theme-toggle .icon-sun,
 .theme-toggle .icon-moon,
 .theme-toggle .icon-auto {
@@ -532,3 +595,121 @@ p {
 .theme-toggle[data-mode="light"] .icon-sun  { display: block; }
 .theme-toggle[data-mode="dark"]  .icon-moon { display: block; }
 .theme-toggle[data-mode="auto"]  .icon-auto { display: block; }
+
+/* ============================= */
+/* Responsive / Mobile           */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* Nav: stack site name + nav vertically, tighter padding */
+  .header-top {
+    flex-wrap: wrap;
+    padding: 14px 16px;
+    gap: 8px;
+  }
+
+  .site-name {
+    font-size: 13pt;
+  }
+
+  .top-nav a {
+    margin-left: 16px;
+    font-size: 11pt;
+  }
+
+  .top-nav a:first-child {
+    margin-left: 0;
+  }
+
+  /* Banner: single column */
+  .banner {
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* Hero: shrink title */
+  .hero {
+    flex-direction: column;
+    padding: 24px 16px;
+    min-height: 0;
+    gap: 8px;
+  }
+
+  .hero h1 {
+    position: static;
+    transform: none;
+    font-size: 32pt;
+  }
+
+  .hero-side {
+    width: auto;
+    margin: 0;
+    text-align: center;
+    font-size: 12pt;
+  }
+
+  /* Main: swap inch margins for small px padding */
+  main {
+    padding: 32px 16px;
+  }
+
+  /* Section headers: restore padding in px */
+  h2 {
+    padding: 20px 16px;
+    margin: 16px -16px 16px -16px;
+  }
+
+  h3 {
+    padding: 20px 16px;
+    margin: 16px -16px 16px -16px;
+  }
+
+  /* Footer: stack vertically */
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 16px;
+  }
+
+  .footer-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Example cards: stack image above info */
+  .example-card {
+    flex-direction: column;
+  }
+
+  .example-img-wrap {
+    aspect-ratio: 16 / 9;
+  }
+
+  .example-info {
+    padding: 20px 20px;
+  }
+
+  #examples-container {
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 26pt;
+  }
+
+  .top-nav {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .top-nav a {
+    margin-left: 12px;
+    font-size: 10.5pt;
+  }
+}

@@ -1,8 +1,6 @@
 // =======================
 // THEME TOGGLE
 // Cycles: auto → light → dark
-// Icon shown via data-mode + CSS (SVG, no emoji)
-// Persists in localStorage
 // =======================
 
 const MODES = ['auto', 'light', 'dark'];
@@ -36,32 +34,61 @@ function saveMode(mode) {
   localStorage.setItem('theme-mode', mode);
 }
 
-// Apply theme immediately before first paint to avoid flash
+// Apply immediately before first paint
 (function () {
-  const mode = getSavedMode();
-  applyTheme(mode);
+  applyTheme(getSavedMode());
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  // ---- Theme toggle ----
   const btn = document.getElementById('theme-toggle');
-  if (!btn) return;
-
-  let currentMode = getSavedMode();
-  applyTheme(currentMode);
-  updateToggleUI(btn, currentMode);
-
-  btn.addEventListener('click', function () {
-    const idx = MODES.indexOf(currentMode);
-    currentMode = MODES[(idx + 1) % MODES.length];
-    saveMode(currentMode);
+  if (btn) {
+    let currentMode = getSavedMode();
     applyTheme(currentMode);
     updateToggleUI(btn, currentMode);
+
+    btn.addEventListener('click', function () {
+      const idx = MODES.indexOf(currentMode);
+      currentMode = MODES[(idx + 1) % MODES.length];
+      saveMode(currentMode);
+      applyTheme(currentMode);
+      updateToggleUI(btn, currentMode);
+    });
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+      if (getSavedMode() === 'auto') applyTheme('auto');
+    });
+  }
+
+  // ---- Page transitions ----
+  // Mark page as faded-in on arrival
+  document.body.classList.add('page-fade-in');
+
+  // Intercept all same-origin nav link clicks
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+
+    // Skip: external, hash-only, mailto, blank target
+    if (!href || href.startsWith('#') || href.startsWith('mailto:')) return;
+    if (link.target === '_blank') return;
+
+    try {
+      const url = new URL(href, window.location.href);
+      if (url.origin !== window.location.origin) return;
+    } catch (err) {
+      return;
+    }
+
+    e.preventDefault();
+    document.body.classList.add('page-fade-out');
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 190);
   });
 
-  // Live-update when OS preference changes (only matters in auto mode)
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
-    if (getSavedMode() === 'auto') {
-      applyTheme('auto');
-    }
-  });
 });
