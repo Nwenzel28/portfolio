@@ -532,6 +532,7 @@ if (examplesContainer) {
     wrap.classList.remove("visible");
     wrap.setAttribute("aria-hidden", "true");
     input.value = "";
+    input.blur();
     restoreAll();
   }
 
