@@ -5,6 +5,16 @@
   <meta charset="UTF-8">
   <title>Engineering Portfolio Collection</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply theme before first paint to prevent flash
+    (function() {
+      var mode = localStorage.getItem('theme-mode') || 'auto';
+      var resolved = mode === 'auto'
+        ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        : mode;
+      document.documentElement.setAttribute('data-theme', resolved);
+    })();
+  </script>
 </head>
 <body>
 
@@ -19,6 +29,10 @@
       <a href="index.html" class="active">Home</a>
       <a href="examples.html">Best Pages</a>
       <a href="numbers.html">2028</a>
+      <button class="theme-toggle" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
+        <span class="theme-toggle-icon" id="theme-icon">☀️</span>
+        <span class="theme-toggle-label" id="theme-label">Light</span>
+      </button>
     </div>
   </div>
 </div>
@@ -53,6 +67,7 @@
   </div>
 </footer>
 
+<script src="theme.js"></script>
 <script src="script.js"></script>
 <script>
   window.addEventListener('scroll', function () {
