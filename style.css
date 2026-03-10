@@ -20,19 +20,19 @@
 }
 
 [data-theme="dark"] {
-  --bg:           #141414;
-  --bg-sticky:    #141414;
-  --bg-section:   #1f1f1f;
-  --bg-banner:    #1a1a1a;
-  --text:         #e2e2e2;
-  --text-muted:   #888888;
-  --text-subtle:  #666666;
-  --text-desc:    #aaaaaa;
-  --accent:       #4fa8cc;
-  --border:       #2e2e2e;
-  --banner-btn-border: #555555;
-  --banner-btn-text:   #bbbbbb;
-  --tooltip-bg:   #2a2a2a;
+  --bg:           #121212;
+  --bg-sticky:    #1a1a1a;
+  --bg-section:   #1e1e1e;
+  --bg-banner:    #1e1e1e;
+  --text:         #e0e0e0;
+  --text-muted:   #999999;
+  --text-subtle:  #6b6b6b;
+  --text-desc:    #c0c0c0;
+  --accent:       #6ab0d4;
+  --border:       #2c2c2c;
+  --banner-btn-border: #4a4a4a;
+  --banner-btn-text:   #c0c0c0;
+  --tooltip-bg:   #2e2e2e;
 }
 
 /* ============================= */
@@ -85,6 +85,11 @@ body {
 
 /* Top Right Navigation */
 
+.top-nav {
+  display: flex;
+  align-items: center;
+}
+
 .top-nav a {
   margin-left: 30px;
   text-decoration: none;
@@ -104,6 +109,14 @@ body {
 
 .top-nav a.active:hover {
   color: var(--text);
+  font-weight: 700;
+}
+
+/* Bump font weight slightly in dark mode for optical thinning compensation */
+[data-theme="dark"] .top-nav a {
+  font-weight: 400;
+}
+[data-theme="dark"] .top-nav a.active {
   font-weight: 700;
 }
 
@@ -481,8 +494,8 @@ p {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
-  margin-left: 24px;
+  padding: 4px 6px;
+  margin-left: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -490,6 +503,7 @@ p {
   border-radius: 6px;
   transition: color 0.2s ease, background-color 0.2s ease;
   flex-shrink: 0;
+  line-height: 1;
 }
 
 .theme-toggle:hover {
