@@ -15,4 +15,4 @@ If you would like to add a portfolio to this collection, please reach out.
 
 ## Online Version
 You can also view the collection on Google Sites:  
-https://sites.google.com/d/1hSgER3HakSNGmSBXmG8r4tYwC3Qfs3oI/p/1jJMXT6vQguqQVEIsrCZLm1LZTC7k99m7/edit
+https://sites.google.com/punahou.edu/engineering-portfolios/home
