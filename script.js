@@ -9,7 +9,7 @@ const portfolios = [
     students: [
       { name: "Ryder Kawachika", link: "https://sites.google.com/punahou.edu/ryder-kawachika-engineering/home" },
       { name: "Mason Domion", link: "https://sites.google.com/punahou.edu/mason-domion/home" },
-      { name: "Tyler Wee", link: "https://sites.google.com/punahou.edu/tylerwee-portfolio/welcome" },
+      { name: "Tyler Wee", link: "https://docs.google.com/document/d/1iAD3hQHj66N-iM04X40CW8Y7AZeSOcJoOrsxKAMuO_g/edit?tab=t.0" },
       { name: "Kala'i Kelekolio", link: "https://sites.google.com/punahou.edu/kalai-kelekolio-portfolio/home" },
       { name: "Kaleo Fleming", link: "https://sites.google.com/punahou.edu/kfleming26engineeringportfolio/home" },
       { name: "Alex Woo", link: "https://sites.google.com/punahou.edu/awoo26-engineering-portfolio/home" },
@@ -60,7 +60,7 @@ const portfolios = [
       { name: "Tristan Kaya", link: "https://sites.google.com/punahou.edu/tristan-kayas-portfolio/home" },
       { name: "Audrey Wee", link: "https://sites.google.com/punahou.edu/pfawee28/home" },
       { name: "Tira Lai", link: "https://sites.google.com/punahou.edu/tiralai-engineeringportfolio/home" },
-      { name: "Coco Heahlke", link: "https://sites.google.com/punahou.edu/cocoheahlke/home" },
+      { name: "Coco Heahlke", link: "https://sites.google.com/punahou.edu/coco-heahlke-portfolio/home" },
       { name: "Riley Mason Uclusin", link: "https://sites.google.com/punahou.edu/rileys-wa-kahiko-project/home" },
       { name: "Kenzo Bumgarner", link: "https://sites.google.com/punahou.edu/kenzobumgarner-gsdportfolio/home" },
       { name: "Andrea Shen", link: "https://sites.google.com/punahou.edu/ashen-engineeringportfolio/home" },
@@ -72,6 +72,7 @@ const portfolios = [
       { name: "Jake Gushikuma", link: "https://sites.google.com/punahou.edu/jakes-engineering-portfolio/home" },
       { name: "Bodhi Kao", link: "https://sites.google.com/punahou.edu/bodhikaoportfolio/global-sustainability-by-design" },
       { name: "Lytron Shinno-Antoine", link: "https://sites.google.com/punahou.edu/engineeringportfolio" }
+      { name: "Mason Gould", link: "https://sites.google.com/punahou.edu/portfolio"
     ]
   },
 
