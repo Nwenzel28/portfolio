@@ -72,7 +72,8 @@ const portfolios = [
       { name: "Jake Gushikuma", link: "https://sites.google.com/punahou.edu/jakes-engineering-portfolio/home" },
       { name: "Bodhi Kao", link: "https://sites.google.com/punahou.edu/bodhikaoportfolio/global-sustainability-by-design" },
       { name: "Lytron Shinno-Antoine", link: "https://sites.google.com/punahou.edu/engineeringportfolio" },
-      { name: "Mason Gould", link: "https://sites.google.com/punahou.edu/portfolio" }
+      { name: "Mason Gould", link: "https://sites.google.com/punahou.edu/portfolio" },
+      { name: "Arazki Tangguh", link: "https://sites.google.com/punahou.edu/engineeringportfolioarazki" )
     ]
   },
 
