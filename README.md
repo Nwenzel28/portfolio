@@ -13,6 +13,7 @@ The goal is to provide inspiration and a reference for students building their o
 ## Contribute
 If you would like to add a portfolio to this collection, please reach out.
 
-## Online Version
-You can also view the collection on Google Sites:  
+## Old Version
+You previously could view the portfolio collectio on Google Sites:  
 https://sites.google.com/punahou.edu/engineering-portfolios/home
+It is still available, but is no longer being updated.
