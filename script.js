@@ -27,13 +27,13 @@ const portfolios = [
   {
     year: "Class of 2027",
     students: [
-      { name: "Alan Mitchell", link: "https://sites.google.com/punahou.edu/alanengineering1portfolio/engineering-3/gyro-project" },
+      { name: "Alan Mitchell", link: "https://sites.google.com/punahou.edu/alanengineering1portfolio/" },
       { name: "Kai Stewart", link: "#" },
       { name: "Lauren Phomsopha", link: "https://sites.google.com/punahou.edu/lphomsophaengineeringportfolio/home" },
       { name: "Joel Kim", link: "https://sites.google.com/punahou.edu/jkim27punahougsd/home" },
       { name: "Nolan Tyau", link: "https://sites.google.com/punahou.edu/nolanportfolio/home" },
-      { name: "Charlie Koh", link: "https://sites.google.com/punahou.edu/charliekoh-gsd-portfolio/engineering-4-go-kart/week-6" },
-      { name: "Mathew Matsumoto", link: "https://sites.google.com/punahou.edu/matthew-matsumoto-engineering-/robotics/ftc" },
+      { name: "Charlie Koh", link: "https://sites.google.com/punahou.edu/charliekoh-gsd-portfolio/" },
+      { name: "Mathew Matsumoto", link: "https://sites.google.com/punahou.edu/matthew-matsumoto-engineering-/" },
       { name: "Max Shei", link: "https://sites.google.com/punahou.edu/maxshei/home" },
       { name: "Liam Snyder", link: "https://sites.google.com/punahou.edu/gsd102liamsnyderdigitalportfol/home" },
       { name: "Carter Nobuhara", link: "https://sites.google.com/punahou.edu/carter-nobuhara-portfolio/home" },
@@ -56,7 +56,7 @@ const portfolios = [
       { name: "Chris Mount", link: "https://sites.google.com/punahou.edu/christopher-mount-engineering-/home" },
       { name: "Scott Williams", link: "https://sites.google.com/punahou.edu/scottwilliams-globalsustainabi/home" },
       { name: "Owen Roe", link: "https://oroe0.github.io/portfolio/" },
-      { name: "Braden Uemoto", link: "https://sites.google.com/punahou.edu/bradenuemoto-engineeringiii/eng-iii/semester-project" },
+      { name: "Braden Uemoto", link: "https://sites.google.com/punahou.edu/bradenuemoto-engineeringiii/" },
       { name: "Tristan Kaya", link: "https://sites.google.com/punahou.edu/tristan-kayas-portfolio/home" },
       { name: "Audrey Wee", link: "https://sites.google.com/punahou.edu/pfawee28/home" },
       { name: "Tira Lai", link: "https://sites.google.com/punahou.edu/tiralai-engineeringportfolio/home" },
@@ -64,13 +64,13 @@ const portfolios = [
       { name: "Riley Mason Uclusin", link: "https://sites.google.com/punahou.edu/rileys-wa-kahiko-project/home" },
       { name: "Kenzo Bumgarner", link: "https://sites.google.com/punahou.edu/kenzobumgarner-gsdportfolio/home" },
       { name: "Andrea Shen", link: "https://sites.google.com/punahou.edu/ashen-engineeringportfolio/home" },
-      { name: "Koen Ka'anapu", link: "https://sites.google.com/punahou.edu/koenengineering/engineering-i/robotics-project" },
+      { name: "Koen Ka'anapu", link: "https://sites.google.com/punahou.edu/koenengineering/" },
       { name: "Evan Chang", link: "https://sites.google.com/punahou.edu/evanchang/tenth-grade/gear-tutorial" },
       { name: "Max Fermanis", link: "https://sites.google.com/punahou.edu/max-portfolio/home" },
       { name: "Ty Schiffl", link: "https://sites.google.com/punahou.edu/ty-schiffl-global-sustainabili/home" },
       { name: "Ka'ula Hashimoto", link: "https://sites.google.com/punahou.edu/khashimotofrcportfolio/home" },
       { name: "Jake Gushikuma", link: "https://sites.google.com/punahou.edu/jakes-engineering-portfolio/home" },
-      { name: "Bodhi Kao", link: "https://sites.google.com/punahou.edu/bodhikaoportfolio/global-sustainability-by-design" },
+      { name: "Bodhi Kao", link: "https://sites.google.com/punahou.edu/bodhikaoportfolio/" },
       { name: "Lytron Shinno-Antoine", link: "https://sites.google.com/punahou.edu/engineeringportfolio" },
       { name: "Mason Gould", link: "https://sites.google.com/punahou.edu/portfolio" },
       { name: "Arazki Tangguh", link: "https://portfolio-website-main.arazkitangguh.workers.dev/" }
@@ -93,7 +93,7 @@ const portfolios = [
     year: "Other",
     students: [
       { name: "Isiah Tanaka ('25)", link: "https://sites.google.com/view/itanaka-stem-portfolio/home" },
-      { name: "Kaila Schiffl ('25)", link: "https://sites.google.com/punahou.edu/kschiffl25engineeringportfolio/engineering-v-24-25/ke-kilohana" },
+      { name: "Kaila Schiffl ('25)", link: "https://sites.google.com/punahou.edu/kschiffl25engineeringportfolio/" },
       { name: "Kawai Kelekolio ('21)", link: "https://sites.google.com/punahou.edu/kelekolioportfolio/background" },
       { name: "Ms. Berman (Template)", link: "https://sites.google.com/punahou.edu/berman-portfolio/home" }
     ]
@@ -328,7 +328,7 @@ const examplePages = [
     name: "Lauren Phomsopha",
     link: "https://sites.google.com/punahou.edu/lphomsophaengineeringportfolio/engineering/engineering-2",
     image: "images/LaurenPhomsopha_Eng2.png",
-    description: "Highley detailed documentation with photos from several angle and throughout the entire process. The final product is well-presented with a clear explanation of the design choices and results."
+    description: "Highly detailed documentation with photos from several angle and throughout the entire process. The final product is well-presented with a clear explanation of the design choices and results."
   },
   {  
     category: "Engineering 3",
