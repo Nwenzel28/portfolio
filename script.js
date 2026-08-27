@@ -85,7 +85,8 @@ const portfolios = [
       { name: "Gabe Warwick", link: "https://sites.google.com/punahou.edu/gsd-portfolio-gabe/home" },
       { name: "Clara Elham", link: "https://sites.google.com/punahou.edu/claras-engineering-portfolio/home" },
       { name: "Keanu Kim", link: "https://sites.google.com/punahou.edu/kkim-gsd/home" },
-      { name: "Whitley Waki", link: "https://sites.google.com/punahou.edu/whitleywakigsdportfolio/home" }
+      { name: "Whitley Waki", link: "https://sites.google.com/punahou.edu/whitleywakigsdportfolio/home" },
+      { name: "Luke Herring", link: "https://sites.google.com/punahou.edu/lherring-gsd/home" }
     ]
   },
 
