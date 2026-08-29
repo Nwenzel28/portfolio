@@ -94,7 +94,7 @@ const portfolios = [
     year: "Class of 2030",
     students: [
       { name: "Kekoa Brotherton", link: "https://sites.google.com/punahou.edu/1portfoliokekoabrotherton/home" },
-      { name: "Aiden Leung", link: "#" ),
+      { name: "Aiden Leung", link: "#" }
 
     ]
   },    
