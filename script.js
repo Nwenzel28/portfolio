@@ -91,6 +91,15 @@ const portfolios = [
   },
 
   {
+    year: "Class of 2030",
+    students: [
+      { name: "Kekoa Brotherton", link: "https://sites.google.com/punahou.edu/1portfoliokekoabrotherton/home" },
+      { name: "Aiden Leung", link: "#" ),
+
+    ]
+  },    
+
+  {
     year: "Other",
     students: [
       { name: "Isiah Tanaka ('25)", link: "https://sites.google.com/view/itanaka-stem-portfolio/home" },
